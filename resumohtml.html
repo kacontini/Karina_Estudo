@@ -1,0 +1,116 @@
+<!-- OS COMENTÁRIOS DE HTML SE DÃO POR ESSE SIMBOLO -->
+
+<!-- Todo projeto deverá ser iniciado com DOCTYPE, que indicará que faremos um html -->
+<!DOCTYPE html>
+
+<!-- Na sequência, devemos abrir o html, que conterá mais componentes sobre ele. Finalizaremos nosso código com </html> -->
+<!-- Devemos citar a linguagem do documento (boas práticas) "pt-br" e o direcionamento da página, que será "left to right"   -->
+<html lang="pt-br" dir="ltr">
+
+<!-- Agora podemos criar nossa <head>, ou cabeçalho. Tudo que ficar dentro desse grupo NÃO APARECERÁ para o usuário, mas serão dados imprescindíveis -->
+    <head>
+
+<!-- Identamos a partir daqui pois estaremos nos referindo apenas à HEAD. Uma meta tag (ou meta description) é uma tag HTML usada para descrever o conteúdo de uma página da web. -->
+<!-- charset significa que nesse HTML utilizaremos o banco de caracteres "UTF-8", que é o mais usado atualmente  -->
+        <meta charset="UTF-8">
+
+<!-- A meta tag de "viewport" controla como um site é exibido em um dispositivo móvel. Faz com que fique "responsivo", com as escalas corretas. SEMPRE COLOCÁ-LA.  -->
+<!-- O "content" servirá para definir esses padrões, onde a escala será conforme a escala do dispositivo o qual o usuário utilizará para abrir o documento -->
+        <meta name="viewport" content="width=device-width, inicial-scale=1.0">
+
+<!-- Aqui iremos adicionar o título que se apresentará na ABA (não é o título que aparece no documento) -->
+        <title>Título da Aba</title>
+
+<!-- Já inserimos os itens básicos, agora podemos fechar a head -->
+    </head>
+
+<!-- O BODY é o nosso cabeçalho, que será de fato nossa área de trabalho (tudo aquilo que o usuário final enxerga)  -->
+    <body>
+
+    <!-- O HEADER dentro do body conterá diversas TAGS, as quais poderão incluir: títulos, parágrafos, imagens, links, etc. -->
+        <header id="topo">
+
+    <!-- Agora incluiremos o título. Ele pode ser definido em até 6 tamanhos diferentes, conforme abaixo -->
+            <h1>Este será o título da minha página</h1>
+            <h2>Este será o título da minha página</h2>
+            <h3>Este será o título da minha página</h3>
+            <h4>Este será o título da minha página</h4>
+            <h5>Este será o título da minha página</h5>
+            <h6>Este será o título da minha página</h6>
+
+            <p> Este será o campo de texto do meu título. Posso até colocar um hyperlink abaixo para direcionar para outro lugar depois </p>
+
+        </header>
+
+
+    <!-- O Elemento (<nav>) representa uma seção de uma página que aponta para outras páginas ou para outras áreas da página, ou seja, uma seção com links de navegação (hyperlinks).-->
+        <nav> 
+            <!-- Esta seção indica que criaremos um hyperlink chamado "Serviços Web". Possui 3 tipos, sendo eles: -->    
+            <!-- Interno - <a href="#contato">Contato</a> - Redirecionará ao elemento âncora contato.
+                Local - <a href="../pages/pagina2.html">Pagina 2</a> - Redirecionará ao arquivo pagina2.html pertencente à pasta pages.
+                Global - <a href="http://www.google.com/">Google</a> - Redirecionará à pagina inicial do Google -->
+                
+            <!-- Podemos fazer isso de forma solta ou em lista com os hyperlinks q eu quero ter no site. UL representa "Unordered List" e "Li" representa o item da lista -->
+            
+                        <a href="#secao0">Vou direcionar para o título "Secao0"</a>
+            
+                            <ul>
+                                <li><a href="#secao1">Vou direcionar para o título "Secao1"</a></li>
+                                <li><a href="#secao2">Vou direcionar para o título "Secao2"</a></li>
+                                <li><a href="#secao3">Vou direcionar para o título "Secao3"</a></li>
+                            </ul>
+                    
+        </nav>
+            
+    <!-- O Elemento (<section>) fará referência aos links criados no <nav>, neste caso, #secao0, #secao1, #secao2 e #secao3 -->
+
+        <section id=#secao0>
+            <h2> Seção 0 </h2>
+            <p> aqui vou falar qualquer coisa </p>
+        </section>
+
+    <!-- Aqui além de incluir um título e parágrafo vou também incluir uma imagem. Para isso, precisarei tê-la salva na mesma pasta de onde está o html -->   
+        <section id=#secao1>
+            <h2> Seção 1 </h2>
+            <p> aqui vou falar qualquer coisa e acrescentar uma imagem para ilustrar </p>
+    
+    <!-- As imagens devem ser incluidas dentro de <div>, conforme abaixo -->   
+            <div>
+                <img src="./img/programacao.jpg" alt="Programação" width="60%">
+            </div>
+        </section>
+
+        <section id=#secao2>
+            <h2> Seção 2 </h2>
+            <p> bla bla bla </p>
+        </section>
+
+        <section id=#secao3>
+            <h2> Seção 3 </h2>
+            <p> último parágrafo </p>
+        </section>
+
+        <section id="contato">
+            <h2>Fale Conosco</h2>
+            <div>
+                <img src="./img/telefone.webp" alt="Telefone" width="20%">
+    
+    <!-- Aqui eu criei um parágrafo que faz menção a um link -->
+                <p><a href="tel:11 99999-9999">(11) 99999-9999 </a></p>
+            </div>
+            <div>
+                <img src="./img/email.webp" alt="E-mail" width="20%">
+                <p><a href="mailto:naotem@naotem.com.br"> naotem@naotem.com.br </a></p>
+            </div>
+
+    <!-- Footer representa o rodapé da página, que normalmente contém um hyperlink para voltar ao topo, desenvolvido por e todos os direitos reservados -->
+    <!-- o símbolo de todos os direitos reservados está representado por &copy; -->
+        <footer>
+            <a href="#topo">Voltar</a>
+            <p>Desenvolvido por <span>KARINA SERAGGI CONTINI</span></p>
+            <p>Todos os direitos reservados. 2022&copy;</p>
+        </footer>
+
+    </body>
+
+    </html>
